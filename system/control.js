@@ -27,17 +27,17 @@ const group = async (ctx, event, eventType) => {
         if (global.db.groups[event.chat].noWelcome === true) return 9999;
 
         const img = ["remove", "add"].includes(eventType) 
-            ? (event.userUrl || "https://files.catbox.moe/hm9iq4.jpg") 
-            : "https://files.catbox.moe/hm9iq4.jpg";
+            ? (event.userUrl || "https://files.catbox.moe/ao4rf6.jpg") 
+            : "https://files.catbox.moe/3h88il.jpg";
 
         await ctx.sock.msgUrl(event.chat, txt, {
             img,
-            title: ctx.config?.info.nameBot || "WhatsApp Bot",
-            body: "𝐴 𝑠𝑖𝑚𝑝𝑙𝑒 𝑊𝒉𝑎𝑡𝑠𝐴𝑝𝑝 𝑏𝑜𝑡 𝑓𝑜𝑟 𝑏𝑒𝑔𝑖𝑛𝑛𝑒𝑟𝑠, 𝑏𝑦 𝑉𝐸𝑁𝑂𝑀",
+            title: ctx.config?.info.nameBot || "𓆩𝕂𝕠𝕜𝕦𝕤𝕙𝕚𝕓𝕠𓆪",
+            body: "𝐴 𝑠𝑖𝑚𝑝𝑙𝑒 𝑊𝒉𝑎𝑡𝑠𝐴𝑝𝑝 𝑏𝑜𝑡 𝑓𝑜𝑟 𝑏𝑒𝑔𝑖𝑛𝑛𝑒𝑟𝑠, 𝑏𝑦 𓆩𝕂𝕠𝕜𝕦𝕤𝕙𝕚𝕓𝕠𓆪",
             mentions: author ? [author, ...participants] : participants,
             newsletter: {
-                name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
-                jid: '120363225356834044@newsletter'
+                name: '✦『 𝑻𝒘𝒊𝒍𝒊𝒈𝒉𝒕 𝑻𝒆𝒂𝒎 』✦',
+                jid: '120363409255768764@newsletter'
             },
             big: ["remove", "add"].includes(eventType)
         });
@@ -80,12 +80,12 @@ const access = async (msg, checkType, time) => {
     
     if (conn && messages[checkType]) {
         await conn.msgUrl(msg.chat, messages[checkType], {
-            img: "https://i.pinimg.com/originals/02/c3/51/02c351dfd4eb72a62f225ce964dc510d.jpg",
+            img: "https://files.catbox.moe/ao4rf6.jpg",
             title: "𝐀𝐥𝐞𝐫𝐭𝐬 | 𝐖𝐚𝐫𝐧𝐢𝐧𝐠𝐬",
             body: "𝐵𝑜𝑡 𝑎𝑙𝑒𝑟𝑡𝑠: 𝑅𝑒𝑎𝑑 𝑡𝒉𝑒 𝑚𝑒𝑠𝑠𝑎𝑔𝑒 𝑡𝑜 𝑙𝑒𝑎𝑟𝑛 𝑚𝑜𝑟𝑒",
             newsletter: {
-                name: '𝐕𝐈𝐈7 ~ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 🕷️',
-                jid: '120363225356834044@newsletter'
+                name: '✦『 𝑻𝒘𝒊𝒍𝒊𝒈𝒉𝒕 𝑻𝒆𝒂𝒎 』✦',
+                jid: '120363409255768764@newsletter'
             },
             big: false
         }, quoted);
